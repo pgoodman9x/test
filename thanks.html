@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <title>Document</title>
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+  <meta name="format-detection" content="telephone=no">
+
+  <!--/////SNS share/////
+  <meta property="og:url" content=" ページの URL" />
+  <meta property="og:type" content=" ページの種類" />
+  <meta property="og:title" content=" ページの タイトル" />
+  <meta property="og:description" content=" ページのディスクリプション" />
+  <meta property="og:site_name" content="サイト名" />
+  <meta property="og:image" content=" サムネイル画像の URL" />
+  /////SNS share/////-->
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.1/css/swiper.css">
+  <link rel="stylesheet" href="css/reset.css" />
+  <link rel="stylesheet" 　type="text/css" href="css/style.css" />
+
+  <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script>
+      $(function () {
+        $('a[href^="#"]').click(function () {
+          var headerHight = 80;
+          var speed = 500;
+          var href = $(this).attr("href");
+          var target = $(href == "#" || href == "" ? 'html' : href);
+          var position = target.offset().top - headerHight;
+          $("html, body").animate({ scrollTop: position }, speed, "swing");
+          return false;
+        });
+      });
+
+      $(window).on('load', function () {
+        var url = $(location).attr('href');
+        if (url.indexOf("#") != -1) {
+          var anchor = url.split("#");
+          var target = $('#' + anchor[anchor.length - 1]);
+          if (target.length) {
+            var pos = Math.floor(target.offset().top) - 80;
+            $("html, body").animate({ scrollTop: pos }, 500);
+          }
+        }
+      });
+    </script>
+</head>
+<body class="p-thanks">
+
+  <header id="top-head">
+    <div class="inner">
+      <div class="site-title">
+        <h1 class="title-name"><a href="https://cinderela-marriage.com"><img src="images/logo-02.png"></a></h1>
+      </div>
+      <div id="nav_toggle">
+        <div>
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="index.html#dansei-data">男性会員データ</a></li>
+          <li><a href="index.html#service">サービスについて</a></li>
+          <li><a href="index.html#uservoice">お客さまの声</a></li>
+          <li><a href="index.html#price">料金について</a></li>
+          <li><a href="index.html#nagare">ご利用の流れ</a></li>
+          <li><a href="index.html#qa">よくある質問</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <div id="common-wrapper">
+    <div class="common-inner">
+      <div id="contact">
+        <div class="ttl">お問い合わせ頂き、ありがとうございます。</div>
+        <p>
+          ご入力いただきましたメールアドレスに、<br/>
+          お問い合わせ完了メールをお送りいたしました。<br/>
+          <br/>
+          メールが届かない場合は、ご入力いただいたメールアドレスが間違っている可能性がございます。<br/>
+          お手数ですが、今一度ご入力内容をご確認の上ご連絡いただけましたら幸いです。
+        </p>
+        <a href="index.html" class="c-btn01">TOPへ戻る</a>
+      </div>
+
+    </div>
+  </div>
+
+    <footer id="footer-wrapper">
+      <div class="footer-inner">
+        <div class="site-title">
+          <div class="title-name"><a href="https://cinderela-marriage.com"><img src="images/logo-02.png"></a></div>
+        </div>
+        <div class="footer-link">
+          <a href="legal.html" class="legal">特定商取引法に基づく表記</a>
+          <a href="privacy.html">プライバシーポリシー</a>
+        </div>
+        <p class="copyright">©︎ 2021 シンデレラマリッジラボ All Right Reserved.</p>
+      </div>
+    </footer>
+<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.1/js/swiper.js"></script>
+<script src="https://sdk.form.run/js/v2/embed.js"></script>
+<script src="js/wrap-scroll.js"></script>
+<script src="js/script.js"></script>
+</body>
+</html>

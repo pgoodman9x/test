@@ -1,0 +1,1829 @@
+@charset "UTF-8";
+/*--------------------------------
+------------------共通----------*/
+.small {
+  font-size: 0.5rem;
+}
+
+.large {
+  font-size: 32px;
+  font-weight: 700;
+}
+
+.red {
+  color: #fa6363;
+  font-weight: bold;
+}
+
+.green {
+  color: #56aaa9;
+}
+
+.attention {
+  font-size: 20px;
+}
+
+.bold {
+  font-weight: 700;
+}
+
+.border-yellow {
+  background: linear-gradient(transparent 50%, #fffad8 50%);
+}
+
+.border-gray {
+  background: linear-gradient(transparent 50%, #f2f1ef 50%);
+}
+
+.title__sub-text {
+  font-size: 16px;
+}
+
+.bottom-unit__30 {
+  display: block;
+  padding-bottom: 30px;
+}
+
+.bottom-unit__10 {
+  display: block;
+  padding-bottom: 10px;
+}
+
+.sp {
+  display: none;
+}
+
+.serif {
+  font-family: serif;
+}
+
+header {
+  position: relative;
+}
+
+.cta-link {
+  display: block;
+  position: fixed;
+  width: 180px;
+  height: 180px;
+  bottom: 3%;
+  right: 3%;
+  background: #fc8301;
+  border: 2px solid #fff;
+  border-radius: 50%;
+  box-shadow: 0 0 10px #5b5b5b;
+  z-index: 999;
+}
+
+.cta-link a {
+  display: block;
+  width: 180px;
+  height: 180px;
+  color: #fff;
+  text-align: center;
+  padding-top: 82px;
+  font-size: 0.875rem;
+}
+
+#fixedBox {
+  display: none;
+}
+
+/*--------------------------------
+------------------共通----------*/
+/*--------------------------------
+-------------------メニュー----------*/
+body {
+  width: 100%;
+  font-family: "Noto Sans JP", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 62.5%;
+  color: #5d5d5d;
+  letter-spacing: 0.06rem;
+}
+
+/*============================
+header style
+============================*/
+.title-name {
+  font-size: 1.25rem;
+  margin-bottom: 0.2rem;
+}
+
+.site-title {
+  width: 40%;
+}
+
+.title-name img {
+  width: 40%;
+}
+
+nav {
+  width: 60%;
+}
+
+#top-head {
+  width: 100%;
+  height: 80px;
+  background: #fff;
+  opacity: 1;
+  display: flex;
+  position: fixed;
+  z-index: 999;
+}
+
+#top-head .inner {
+  float: left;
+  width: 90%;
+  max-width: 1280px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/*logo style*/
+.inner h1 a {
+  color: #20b2aa;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/*nav style*/
+#top-head nav ul {
+  display: flex;
+  list-style-type: none;
+  justify-content: flex-end;
+}
+
+/*nav link style*/
+#top-head nav ul li a {
+  text-decoration: none;
+  padding: 16px;
+  color: #404040;
+}
+
+#top-head nav ul li a:hover {
+  color: #20b2aa;
+}
+
+#nav_toggle {
+  display: none;
+}
+
+/*============================
+mobile style
+============================*/
+@media screen and (max-width: 680px) {
+  /*hamburger menu style*/
+  #nav_toggle {
+    display: block;
+    width: 30px;
+    height: 30px;
+    position: relative;
+    top: 4px;
+    padding: 10px 0;
+    z-index: 100;
+  }
+
+  #nav_toggle div {
+    position: relative;
+  }
+
+  /*hamburger menu close style*/
+  #nav_toggle span {
+    display: block;
+    height: 2px;
+    background: #404040;
+    position: absolute;
+    width: 100%;
+    left: 0;
+    -webkit-transition: 0.5s ease-in-out;
+    -moz-transition: 0.5s ease-in-out;
+    transition: 0.5s ease-in-out;
+  }
+
+  #nav_toggle span:nth-child(1) {
+    top: 0px;
+  }
+
+  #nav_toggle span:nth-child(2) {
+    top: 10px;
+  }
+
+  #nav_toggle span:nth-child(3) {
+    top: 20px;
+  }
+
+  /*hamburger menu open style*/
+  .open #nav_toggle span:nth-child(1) {
+    top: 10px;
+    -webkit-transform: rotate(135deg);
+    -moz-transform: rotate(135deg);
+    transform: rotate(135deg);
+  }
+
+  .open #nav_toggle span:nth-child(2) {
+    width: 0;
+    left: 50%;
+  }
+
+  .open #nav_toggle span:nth-child(3) {
+    top: 10px;
+    -webkit-transform: rotate(-135deg);
+    -moz-transform: rotate(-135deg);
+    transform: rotate(-135deg);
+  }
+
+  /*nav style*/
+  #top-head nav {
+    display: none;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    height: 1040px;
+    background: #fff;
+    z-index: 999;
+  }
+
+  #top-head nav ul {
+    display: block;
+    width: 80%;
+  }
+
+  #top-head nav ul li {
+    text-align: center;
+    border-bottom: 1px solid #dcdcdc;
+  }
+
+  #top-head nav ul li:last-child {
+    border: none;
+  }
+
+  /*nav link style*/
+  #top-head nav ul li a {
+    display: block;
+  }
+}
+/*--------------------------------
+-------------------メニュー----------*/
+/*--------------------------------
+-------------------main-image----------*/
+.hero-2col {
+  width: 100vw;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-2col .hero-title {
+  max-width: 320px;
+  position: absolute;
+  top: 20%;
+  left: 14%;
+}
+
+.hero-2col .hero-title p {
+  display: inline-block;
+  background: #61c0bf;
+  color: #fff;
+  font-size: 36px;
+  margin: 5px;
+  padding: 6px 15px 6px 10px;
+}
+
+.hero-image {
+  width: 70%;
+  height: auto;
+  margin: 0 auto;
+  margin-top: 60px;
+}
+
+.hero-image img {
+  width: 100%;
+}
+
+.top-cta {
+  width: 27%;
+  margin: 0 auto;
+}
+
+.top-cta img {
+  width: 100%;
+}
+
+/*--------------------------------
+-------------------main-image----------*/
+/*--------------------------------
+-------------------実績----------*/
+.jisseki {
+  width: 36vw;
+  margin: auto;
+  margin-top: 38px;
+  text-align: center;
+}
+
+.jisseki__title {
+  font-size: 20px;
+  color: #9f8a1b;
+  font-weight: 700;
+  margin-bottom: 13px;
+}
+
+/*--------------------------------
+-------------------実績----------*/
+/*--------------------------------
+-------------------男性データ----------*/
+.dansei-data {
+  background: #f8f9fa;
+  padding: 30px;
+  text-align: center;
+  margin-top: 38px;
+}
+
+.dansei-data .data {
+  width: 70vw;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.dansei-data__title {
+  font-size: 20px;
+  color: #9f8a1b;
+  font-weight: 700;
+  margin: 26px auto 10px auto;
+}
+
+.dansei-data__text {
+  font-size: 14px;
+  margin-bottom: 15px;
+}
+
+.dansei-data .data .nenshuu,
+.dansei-data .data .shokugyou,
+.dansei-data .data .nenrei {
+  width: 30%;
+  margin: 0 auto;
+}
+
+.dansei-data .data .nenshuu img,
+.dansei-data .data .shokugyou img,
+.dansei-data .data .nenrei img {
+  width: 100%;
+}
+
+.dansei-data .data ul > li {
+  font-size: 13px;
+  padding: 5px 0;
+}
+
+/*--------------------------------
+-------------------男性データ----------*/
+/*--------------------------------
+-------------------成婚例----------*/
+.seikon-summary {
+  width: 50vw;
+  margin: 38px auto;
+  height: 200px;
+  background: #05bebb;
+  text-align: center;
+  border-radius: 30px;
+}
+
+.seikon-summary .seikon-summary__title h2 {
+  font-size: 18px;
+  color: #fff;
+  padding: 23px 0;
+}
+
+.seikon-summary__slider {
+  width: 80%;
+  height: 120px;
+  margin: 0 auto;
+  background: #fff;
+  overflow-y: scroll;
+}
+
+.seikon-summary__slider .swiper-slide p {
+  font-size: 12px;
+  font-weight: 400;
+}
+
+.slider1 {
+  height: 300px;
+}
+
+/*--------------------------------
+-------------------成婚例----------*/
+.nayami {
+  position: relative;
+  background: url(../images/nayami-bg.jpg);
+  padding: 50px 0;
+}
+
+.nayami-container {
+  width: 60vw;
+  color: #fff;
+  text-align: center;
+  margin-left: auto;
+  margin-right: 0;
+}
+
+.nayami-container p {
+  font-size: 16px;
+  margin-bottom: 25px;
+}
+
+.nayami-container img {
+  display: inline-block;
+  width: 80%;
+  margin: 11px 0 74px 0;
+}
+
+.nayami-container p.nayami-text__bold {
+  font-size: 28px;
+  font-weight: 400;
+}
+
+.fuanyouso {
+  width: 100%;
+}
+
+.fuanyouso h2 {
+  background: #61c0bf;
+  color: #fff;
+  font-size: 26px;
+  text-align: center;
+  padding: 40px 0;
+  line-height: 1.4;
+}
+
+.fuanyouso img {
+  width: 40%;
+  display: block;
+  margin: 0 auto;
+  margin-top: 56px;
+}
+
+.fuanyouso p {
+  text-align: center;
+  font-size: 1rem;
+  margin: 24px auto;
+  line-height: 1.4;
+}
+
+/*--------------------------------
+-------------------他社特徴----------*/
+.tasha-tokuchou {
+  width: 50vw;
+  margin: 50px auto 90px auto;
+  background: #f8f9fa;
+}
+
+.tasha-tokuchou h3 {
+  font-size: 26px;
+  text-align: center;
+  padding-top: 30px;
+}
+
+.tasha-tokuchou__box {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  padding-bottom: 50px;
+}
+
+.tasha-tokuchou img {
+  width: 23%;
+}
+
+/*--------------------------------
+-------------------他社特徴----------*/
+/*--------------------------------
+-------------------証拠----------*/
+.shouko-bg {
+  background-image: url(../images/shouko-bg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center bottom;
+  padding-bottom: 60px;
+}
+
+.shouko-title {
+  margin: 0 auto;
+  display: block;
+}
+
+.shouko-title h2 {
+  font-size: 26px;
+  line-height: 1.4;
+  color: #61c0bf;
+  width: 50vw;
+  margin: 0 auto 20px auto;
+}
+
+.shoko-title__small {
+  font-size: 22px;
+  color: #505050;
+}
+
+.shouko-title img {
+  width: 40%;
+  display: block;
+  margin: 0 auto;
+  padding-top: 20px;
+}
+
+.shouko-title p {
+  width: 50vw;
+  margin: 0 auto;
+  font-size: 16px;
+  text-align: center;
+  line-height: 1.4;
+}
+
+.shouko-text__height {
+  padding-top: 20px;
+}
+
+.shouko-riyuu h2 {
+  background: #61c0bf;
+  color: #fff;
+  font-size: 26px;
+  text-align: center;
+  padding: 40px 0;
+  line-height: 1.4;
+}
+
+.shouko-point-inner {
+  width: 100vw;
+  background-image: url(../images/shouko-3point__bg.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center top;
+  padding: 50px 0;
+}
+
+.shouko-point-inner img {
+  display: block;
+  margin: 0 auto;
+  width: 40%;
+}
+
+/*--------------------------------
+-------------------証拠----------*/
+/*--------------------------------
+-------------------コンセプト----------*/
+.concept-box__01,
+.concept-box__02,
+.concept-box__03 {
+  width: 60vw;
+  margin: 50px auto;
+}
+
+.concept-box__num {
+  width: 8%;
+  margin: 0 auto;
+  display: block;
+}
+
+.concept-box-2col {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 30px;
+}
+
+.concept-box-2col img {
+  width: 60%;
+}
+
+.concept-box__text {
+  padding: 20px;
+}
+
+.concept-box__text h3 {
+  font-size: 20px;
+  color: #9f8a1b;
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+
+.concept-box__text p {
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+/*--------------------------------
+-------------------コンセプト----------*/
+/*--------------------------------
+-------------------お客様の声----------*/
+.uservoice {
+  background-image: url(../images/uservoice_wrap_bg.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: 0 0 80px 0;
+  margin-top: 80px;
+}
+
+.uservoice_title h2 {
+  color: #fff;
+  font-size: 26px;
+  text-align: center;
+  padding: 40px 0;
+  line-height: 1.4;
+  margin-bottom: 10px;
+}
+
+.uservoice_title {
+  background-image: url(../images/uservoice_bg.png);
+  background-size: 70%;
+  background-repeat: no-repeat;
+}
+
+.slider2 {
+  width: 50%;
+  padding-bottom: 20px;
+}
+
+.uservoice-slider img {
+  width: 80%;
+  display: block;
+  margin: 0 auto;
+}
+
+.swiper-button-prev {
+  background-image: url(../images/prev.png);
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 50px;
+  height: 50px;
+  margin-top: -22px;
+  z-index: 10;
+  cursor: pointer;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.swiper-button-next {
+  background-image: url(../images/next.png);
+  position: absolute;
+  top: 50%;
+  right: 0;
+  width: 50px;
+  height: 50px;
+  margin-top: -22px;
+  z-index: 10;
+  cursor: pointer;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.swiper-pagination-bullet {
+  background: #59979d;
+}
+
+/*--------------------------------
+-------------------お客様の声----------*/
+/*--------------------------------
+-------------------ストーリー----------*/
+.story {
+  padding: 0 0 80px 0;
+}
+
+.story h2 {
+  color: #fff;
+  font-size: 26px;
+  font-family: serif;
+  text-align: center;
+  padding: 160px 0;
+  line-height: 1.4;
+  background-image: url(../images/story-bg.png);
+  background-size: cover;
+  background-position-y: center;
+  background-repeat: no-repeat;
+}
+
+.story-text {
+  width: 50vw;
+  margin: 50px auto 0 auto;
+  font-size: 14px;
+  font-family: serif;
+  line-height: 1.8;
+}
+
+.text_wrapper {
+  position: relative;
+  width: 40vw;
+  margin: 0 auto;
+  margin: 45px auto;
+}
+
+.text {
+  height: 300px;
+  overflow: hidden;
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+.text_wrapper ul {
+  margin: 20px auto;
+}
+
+.text_wrapper ul li {
+  font-size: 12px;
+}
+
+.show_more,
+.show_more2 {
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  width: 100%;
+  padding-top: 60px;
+  text-align: center;
+  line-height: 30px;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, white 70%);
+  cursor: pointer;
+  transition: bottom 0.2s;
+}
+
+/*
+.show_more::before {
+  content: "";
+  width: 300px;
+  height: 80px;
+  background: #f5be42;
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 50%;
+}*/
+.active {
+  background: none;
+  bottom: -30px;
+}
+
+/*--------------------------------
+-------------------ストーリー----------*/
+/*--------------------------------
+-------------------料金----------*/
+.price-title {
+  background: #9f8a1b;
+  padding: 40px 0;
+}
+
+.price-title__inner {
+  width: 50vw;
+  margin: 0 auto;
+  color: #fff;
+}
+
+.price-title__inner h2 {
+  font-size: 26px;
+  line-height: 1.4;
+}
+
+.price-title__inner p {
+  margin-bottom: 30px;
+}
+
+.price-title__inner img {
+  display: block;
+  margin: 0 auto;
+}
+
+.price-tasha__hyou {
+  border-collapse: collapse;
+  text-align: left;
+  line-height: 1.5;
+}
+
+.table-title-wrap {
+  display: block;
+  width: 100%;
+  padding: 20px 0 20px 0;
+  margin-top: 30px;
+  text-align: center;
+}
+
+.table-title {
+  display: inline-block;
+  font-size: 24px;
+  border-bottom: 1px dotted #505050;
+  font-weight: 700;
+}
+
+.price-tasha__hyou th {
+  padding: 10px;
+  color: #9f8a1b;
+  text-align: center;
+  font-size: 14px;
+}
+
+.price-tasha__hyou {
+  width: 60vw;
+  margin: 30px auto 80px auto;
+}
+
+.price-tasha__hyou td {
+  width: 10%;
+  text-align: center;
+  font-size: 14px;
+  border-bottom: 1px solid #ccc;
+  border-right: 1px solid #ccc;
+  border-left: 1px solid #ccc;
+  height: 60px;
+  vertical-align: middle;
+}
+
+td.price-tasha__hyou--main {
+  background: #9f8a1b;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.price-tasha__hyou--sub {
+  background: #fafafa;
+  color: #8a8b8b;
+}
+
+/*--------------------------------
+-------------------料金----------*/
+/*--------------------------------
+-------------------流れ----------*/
+.nagare-title {
+  background: #61c0bf;
+}
+
+.nagare-title__inner {
+  width: 60vw;
+  margin: 0 auto;
+  color: #fff;
+  padding: 40px 0;
+  margin-bottom: 50px;
+}
+
+.nagare-title__inner h2 {
+  font-size: 26px;
+  line-height: 1.4;
+}
+
+.nagare-image {
+  display: block;
+  width: 50%;
+  margin: 0 auto;
+}
+
+.nagare-image img {
+  width: 100%;
+}
+
+/*--------------------------------
+-------------------流れ----------*/
+/*--------------------------------
+-------------------返金----------*/
+.henkin img {
+  display: block;
+  width: 60%;
+  margin: 0 auto;
+  padding: 100px 0;
+}
+
+/*--------------------------------
+-------------------返金----------*/
+/*--------------------------------
+-------------------成婚率----------*/
+.seikonritu {
+  background-image: url(../images/seikonritu_bg.png);
+  background-size: 80%;
+  background-position: center right;
+  background-repeat: no-repeat;
+  position: relative;
+  z-index: -2;
+  padding: 60px 0;
+}
+
+.seikonritu_title {
+  width: 980px;
+  margin: 0 auto;
+  padding-left: 100px;
+  position: relative;
+}
+
+.seikonritu_title::before {
+  content: "";
+  background: #61c0bf;
+  width: 93vw;
+  height: 116px;
+  position: absolute;
+  top: 0;
+  left: -50vw;
+  z-index: -1;
+}
+
+.seikonritu_title h2 {
+  color: #fff;
+  font-size: 26px;
+  padding: 40px 0;
+  line-height: 1.4;
+}
+
+.seikonritu-image {
+  width: 70vw;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.seikonritu-image img {
+  display: block;
+  margin: 0 auto;
+}
+
+.seikonritu-image p {
+  font-size: 14px;
+  padding-top: 30px;
+  padding-left: 20px;
+  line-height: 1.4;
+  text-shadow: 2px 2px 10px #fff, -2px 2px 10px #fff, 2px -2px 10px #fff, -2px -2px 10px #fff;
+  letter-spacing: 0.08rem;
+}
+
+/*--------------------------------
+-------------------成婚率----------*/
+.qa {
+  background: #f7fffd;
+  padding: 50px 0;
+  width: 70vw;
+  margin: 0 auto;
+}
+
+.qa-q {
+  color: #62bfbe;
+  font-size: 18px;
+  padding: 0 10px;
+}
+
+.qa-inner h2 {
+  width: 50vw;
+  margin: 0 auto 30px auto;
+  background: #61c0bf;
+  color: #fff;
+  font-size: 26px;
+  text-align: center;
+  padding: 40px 0;
+  line-height: 1.4;
+}
+
+.cp_actab {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.cp_actab input {
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
+}
+
+.cp_actab label {
+  width: 60%;
+  line-height: 3;
+  position: relative;
+  display: block;
+  cursor: pointer;
+  margin: 0.5rem auto 0.5rem auto;
+  background: #fff;
+  box-shadow: 0 0 8px gray;
+  font-size: 16px;
+}
+
+.cp_actab .cp_actab-content {
+  overflow: hidden;
+  font-size: 14px;
+  line-height: 1.6;
+  max-height: 0;
+  -webkit-transition: max-height 0.35s;
+  transition: max-height 0.35s;
+  width: 60%;
+  margin: 0 auto;
+}
+
+.cp_actab .cp_actab-content p {
+  margin: 1em;
+}
+
+/* :checked */
+.cp_actab input:checked ~ .cp_actab-content {
+  max-height: 20em;
+}
+
+/* Icon */
+.cp_actab label::after {
+  line-height: 3;
+  position: absolute;
+  top: 3%;
+  right: 0;
+  display: block;
+  width: 3em;
+  height: 3em;
+  -webkit-transition: all 0.35s;
+  transition: all 0.35s;
+  text-align: center;
+}
+
+.cp_actab input[type=checkbox] + label::after {
+  content: "+";
+  font-size: 16px;
+}
+
+.cp_actab input[type=checkbox]:checked + label::after {
+  transform: rotate(315deg);
+}
+
+.contact {
+  margin-top: 50px;
+}
+
+.contact-inner h2 {
+  background: #61c0bf;
+  color: #fff;
+  font-size: 26px;
+  text-align: center;
+  padding: 40px 0;
+  line-height: 1.4;
+}
+
+.footer-inner {
+  width: 100%;
+  background: #f7fffd;
+  text-align: center;
+  padding: 30px 0 20px 0;
+  margin-top: 50px;
+}
+
+.footer-inner .site-title {
+  margin: 0 auto;
+}
+
+.footer-link {
+  margin: 30px auto;
+}
+
+.footer-link a {
+  color: #62bfbe;
+  font-weight: bold;
+  font-size: 0.75rem;
+}
+
+.footer-link a :hover {
+  opacity: 0.8;
+}
+
+.footer-link .legal {
+  margin-right: 30px;
+}
+
+.copyright {
+  padding-top: 20px;
+  text-align: center;
+}
+
+@media screen and (max-width: 768px) {
+  .pc {
+    display: none;
+  }
+
+  .sp {
+    display: block;
+  }
+
+  #top-head {
+    height: 60px;
+  }
+
+  #nav_toggle {
+    padding: 0;
+  }
+
+  #top-head nav ul {
+    width: 100%;
+  }
+
+  #top-head nav ul li a {
+    padding: 20px 0;
+  }
+
+  img {
+    width: 100%;
+    display: block;
+  }
+
+  .title-name img {
+    width: 100%;
+  }
+
+  .hero-image img {
+    display: none;
+  }
+
+  .hero-2col {
+    width: 100%;
+    height: 400px;
+    background-image: url(../images/header-image.png);
+    background-position: center bottom;
+    background-size: 150%;
+    background-repeat: no-repeat;
+    padding-top: 0;
+  }
+
+  .hero-2col .hero-title {
+    max-width: 320px;
+    position: absolute;
+    top: 16%;
+    left: 0;
+  }
+
+  .hero-2col .hero-title p {
+    font-size: 22px;
+    margin: 3px;
+    padding: 6px 10px 6px 10px;
+  }
+
+  .content-inner {
+    overflow: hidden;
+  }
+
+  .top-cta {
+    width: 90%;
+  }
+
+  .jisseki {
+    width: 90%;
+  }
+
+  .dansei-data__title {
+    margin: 10px auto;
+  }
+
+  .dansei-data__text {
+    font-size: 12px;
+    margin-bottom: 30px;
+  }
+
+  .dansei-data .data {
+    width: 100%;
+    display: block;
+  }
+
+  .dansei-data .data .nenshuu,
+.dansei-data .data .shokugyou,
+.dansei-data .data .nenrei {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .nenshuu,
+.shokugyou,
+.nenrei {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+  }
+
+  .dansei-data .data .nenshuu img,
+.dansei-data .data .shokugyou img,
+.dansei-data .data .nenrei img {
+    width: 50%;
+  }
+
+  .dansei-data .data ul {
+    padding-left: 20px;
+  }
+
+  .dansei-data .data ul > li {
+    font-size: 11px;
+    text-align: left;
+  }
+
+  .seikon-summary {
+    width: 90%;
+  }
+
+  .slider1 {
+    width: 100%;
+  }
+
+  .seikon-summary__slider .swiper-slide p {
+    font-size: 10px;
+  }
+
+  .seikon-summary .seikon-summary__title h2 {
+    font-size: 11px;
+  }
+
+  .nayami {
+    position: static;
+    background: url(../images/nayami-bg.jpg);
+    background-size: cover;
+    background-position: 30%;
+    height: auto;
+    padding: 40px 20px 10px 20px;
+  }
+
+  .nayami-container {
+    position: static;
+    width: 100%;
+    margin: 0;
+    text-align: center;
+    box-sizing: border-box;
+    line-height: 1.6;
+  }
+
+  .nayami-container img {
+    width: 110%;
+    margin: 20px 0 40px -5%;
+  }
+
+  .nayami-container p {
+    font-size: 14px;
+  }
+
+  .nayami-container p.nayami-text__bold {
+    font-size: 20px;
+  }
+
+  .fuanyouso h2 {
+    font-size: 18px;
+    padding: 20px;
+  }
+
+  .fuanyouso p {
+    font-size: 12px;
+  }
+
+  .tasha-tokuchou__box {
+    display: block;
+  }
+
+  .tasha-tokuchou {
+    width: 90%;
+    margin: 50px auto 30px auto;
+  }
+
+  .tasha-tokuchou img {
+    width: 50%;
+  }
+
+  .fuanyouso-inner {
+    padding: 20px;
+  }
+
+  .fuanyouso img {
+    margin-top: 20px;
+    width: 90%;
+  }
+
+  .tasha-tokuchou__box img {
+    width: 60%;
+  }
+
+  .tasha-tokuchou h3 {
+    font-size: 18px;
+  }
+
+  .concept-box__text p {
+    font-size: 12px;
+    line-height: 1.6;
+  }
+
+  .shoko-title__small {
+    font-size: 16px;
+  }
+
+  .shouko-title h2 {
+    font-size: 18px;
+    width: 90%;
+  }
+
+  .shouko-title img {
+    width: 90%;
+  }
+
+  .shouko-title p {
+    width: 90%;
+    font-size: 12px;
+  }
+
+  .shouko-riyuu h2 {
+    font-size: 18px;
+    padding: 20px;
+  }
+
+  .title__sub-text {
+    font-size: 10px;
+  }
+
+  .shouko-point-inner img {
+    width: 90%;
+  }
+
+  .concept-box__num {
+    width: 20%;
+  }
+
+  .concept-box-2col {
+    display: block;
+    padding-top: 10px;
+  }
+
+  .concept-box-2col img {
+    margin: 0 auto;
+  }
+
+  .concept-box__01,
+.concept-box__02,
+.concept-box__03 {
+    width: 90%;
+    margin: 30px auto 0 auto;
+  }
+
+  .concept-box-2col {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .concept-box__02 img {
+    order: 1;
+  }
+
+  .concept-box__text {
+    order: 2;
+  }
+
+  .uservoice {
+    padding: 0 0 30px 0;
+    margin-top: 30px;
+  }
+
+  .uservoice_title {
+    background-size: cover;
+  }
+
+  .slider2 {
+    width: 100%;
+  }
+
+  .uservoice-slider img {
+    width: 100%;
+  }
+
+  .swiper-button-prev,
+.swiper-button-next {
+    width: 35px;
+    height: 35px;
+  }
+
+  .swiper-container-horizontal > .swiper-pagination-bullets {
+    bottom: 0;
+  }
+
+  .story {
+    padding: 30px 0;
+  }
+
+  .story h2 {
+    font-size: 18px;
+    padding: 60px 0;
+  }
+
+  .text_wrapper {
+    width: 90vw;
+  }
+
+  .price-title__inner {
+    width: 90%;
+  }
+
+  .table-title-wrap {
+    display: block;
+    width: 100%;
+    padding: 20px 0 20px 0;
+    margin-bottom: 0;
+    text-align: center;
+  }
+
+  .table-title {
+    display: inline-block;
+    font-size: 18px;
+    border-bottom: 1px dotted #505050;
+  }
+
+  .price-tasha__hyou {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin: 0 0 30px 0;
+    box-sizing: border-box;
+    overflow-x: scroll;
+    white-space: nowrap;
+    -webkit-overflow-scrolling: touch;
+    background: #f6f6f6;
+  }
+
+  .price-tasha__hyou th,
+.price-tasha__hyou td {
+    padding: 10px;
+    font-size: 12px;
+  }
+
+  .nagare-title__inner h2 {
+    font-size: 18px;
+    padding-bottom: 10px;
+  }
+
+  .nagare-title__inner {
+    width: 100%;
+    padding: 20px;
+  }
+
+  .nagare-title__inner {
+    margin-bottom: 30px;
+  }
+
+  .nagare-image {
+    width: 100%;
+    margin-bottom: 30px;
+  }
+
+  .henkin img {
+    width: 100%;
+    padding: 20px 0;
+  }
+
+  .seikonritu {
+    padding: 0 0 20px 0;
+    background-size: cover;
+    background-position-x: 85%;
+  }
+
+  .seikonritu_title {
+    width: 100%;
+    text-align: center;
+    padding-left: 0;
+    background: #61c0bf;
+  }
+
+  .seikonritu-image p {
+    padding: 20px;
+    font-size: 14px;
+    line-height: 1.6;
+  }
+
+  .seikonritu_title::before {
+    display: none;
+  }
+
+  .cp_actab label::after {
+    top: 0;
+    width: 2em;
+    height: 100%;
+  }
+
+  .seikonritu-image {
+    width: 100%;
+    display: block;
+  }
+
+  .qa {
+    width: 100%;
+  }
+
+  .qa-inner h2 {
+    width: 100%;
+  }
+
+  .cp_actab label {
+    font-size: 14px;
+    width: 90%;
+    line-height: 1.4;
+    height: 48px;
+    padding-right: 30px;
+    text-align: center;
+  }
+
+  .cp_actab .cp_actab-content {
+    width: 90%;
+  }
+
+  .contact {
+    margin-top: 0;
+  }
+
+  .contact-inner h2 {
+    font-size: 18px;
+    padding: 20px;
+  }
+}
+/*--------------------------------
+-------------------プライバシーポリシー----------*/
+.common-inner {
+  width: 920px;
+  margin: 0 auto;
+  font-size: 1rem;
+  padding-top: 180px;
+  line-height: 1.8;
+}
+
+.common-inner h2 {
+  background: #62bfbe;
+  color: #fff;
+  padding: 20px;
+  margin: 20px auto;
+}
+
+.common-inner h3 {
+  padding: 10px;
+  margin: 20px auto;
+  border-left: 5px solid #62bfbe;
+  margin-top: 60px;
+}
+
+.common-inner p {
+  margin-bottom: 20px;
+}
+
+.common-inner ul {
+  padding: 20px;
+}
+
+.common-inner ul li {
+  margin-bottom: 10px;
+}
+
+@media screen and (max-width: 768px) {
+  .common-inner {
+    width: 100%;
+    padding: 20px;
+    padding-top: 100px;
+    font-size: 0.75rem;
+  }
+
+  .common-inner h2 {
+    font-size: 1rem;
+  }
+
+  .common-inner h3 {
+    font-weight: bold;
+  }
+
+  .footer-link a {
+    font-size: 0.5rem;
+  }
+
+  .cta-link {
+    width: 90%;
+    height: 50px;
+    bottom: 3%;
+    left: 0;
+    right: 0;
+    margin: auto;
+    border-radius: 10px;
+  }
+
+  .cta-link a {
+    width: 100%;
+    height: 50px;
+    padding-top: 0;
+    line-height: 50px;
+  }
+}
+/*--------------------------------
+-------------------プライバシーポリシー----------*/
+#content-wrapper {
+  overflow: hidden;
+}
+
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+#contact .ttl {
+  font-size: 26px;
+  font-weight: bold;
+  color: #fff;
+  background: #61C0BF;
+  text-align: center;
+  padding: 48px 15px;
+  margin-bottom: 65px;
+  line-height: 1.4;
+  font-family: serif;
+}
+#contact .contact__wrapper {
+  max-width: 800px;
+  margin: 0 auto;
+}
+#contact .contact__wrapper .contact__form {
+  font-family: serif;
+}
+#contact .contact__wrapper .contact__form .row {
+  margin-bottom: 30px;
+}
+#contact .contact__wrapper .contact__form .row:last-child {
+  margin-bottom: 50px;
+}
+#contact .contact__wrapper .contact__form .head {
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+#contact .contact__wrapper .contact__form .head .required {
+  font-weight: 500;
+  font-size: 10px;
+  color: #EF2C47;
+  margin-left: 15px;
+}
+#contact .contact__wrapper .contact__form .error {
+  font-size: 13px;
+  color: #B70000;
+  display: block;
+  margin-top: 10px;
+}
+#contact .contact__wrapper .contact__form dd {
+  font-size: 14px;
+  letter-spacing: 0.0125em;
+}
+#contact .contact__wrapper .contact__form dd p {
+  margin-top: 10px;
+}
+#contact .contact__wrapper .contact__form input[type=text], #contact .contact__wrapper .contact__form input[type=email], #contact .contact__wrapper .contact__form input[type=tel] {
+  height: 65px;
+  width: 100%;
+  box-sizing: border-box;
+  border: 1px solid #4D4D4D;
+  padding: 0 20px;
+}
+#contact .contact__wrapper .contact__form input[type=text].is-error, #contact .contact__wrapper .contact__form input[type=email].is-error, #contact .contact__wrapper .contact__form input[type=tel].is-error {
+  color: #B94A48 !important;
+  background-color: #F2DEDE !important;
+  border: 1px solid #EED3D7 !important;
+}
+#contact .contact__wrapper .contact__form .radio__field {
+  position: relative;
+  padding-left: 30px;
+  margin-right: 100px;
+}
+#contact .contact__wrapper .contact__form .radio__field input {
+  display: none;
+}
+#contact .contact__wrapper .contact__form .radio__field input:checked ~ .checkmark:after {
+  display: block;
+}
+#contact .contact__wrapper .contact__form .radio__field .checkmark {
+  height: 16px;
+  width: 16px;
+  display: inline-block;
+  border: 1px solid #DFDFDF;
+  position: absolute;
+  border-radius: 50%;
+  left: 0;
+  top: 1px;
+}
+#contact .contact__wrapper .contact__form .radio__field .checkmark:after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  height: 7px;
+  width: 7px;
+  border-radius: 50%;
+  background: #61C0BF;
+  transform: translate(-50%, -50%);
+  display: none;
+}
+#contact .contact__wrapper .contact__btn {
+  text-align: center;
+}
+#contact .contact__wrapper .contact__btn input[type=submit] {
+  width: 360px;
+  max-width: 100%;
+  height: 70px;
+  background: #61C0BF;
+  color: #fff;
+  font-size: 16px;
+  font-weight: bold;
+  letter-spacing: 0.0125em;
+  text-align: center;
+  padding: 0 15px;
+  border: 2px solid #61C0BF;
+  transition: 0.2s ease;
+}
+#contact .contact__wrapper .contact__btn input[type=submit]:hover {
+  background: #fff;
+  color: #61C0BF;
+}
+
+.c-btn01 {
+  width: 360px;
+  max-width: 100%;
+  height: 70px;
+  background: #61C0BF;
+  color: #fff;
+  font-size: 16px;
+  font-weight: bold;
+  letter-spacing: 0.0125em;
+  text-align: center;
+  padding: 0 15px;
+  border: 2px solid #61C0BF;
+  transition: 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+}
+.c-btn01:hover {
+  background: #fff;
+  color: #61C0BF;
+}
+
+.p-thanks #contact {
+  padding-bottom: 50px;
+}
+.p-thanks #contact .ttl {
+  margin-bottom: 40px;
+}
+.p-thanks #contact p {
+  text-align: center;
+  margin-bottom: 50px;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+#ui-datepicker-div {
+  font-size: 16px;
+  padding: 0 0;
+  margin-top: 10px;
+  position: relative;
+}
+#ui-datepicker-div:before {
+  content: "";
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 4px 8px 4px;
+  border-color: transparent transparent #61c0be transparent;
+  position: absolute;
+  top: 0;
+  left: 10px;
+  display: block;
+  transform: translateY(-100%);
+}
+#ui-datepicker-div .ui-datepicker-header {
+  background: #61C0BF;
+  border: none;
+  border-radius: 0;
+}
+#ui-datepicker-div .ui-datepicker-title {
+  color: #fff;
+}
+#ui-datepicker-div .ui-datepicker-calendar th {
+  background: #61C0BF;
+  font-size: 12px;
+}
+#ui-datepicker-div .ui-datepicker-calendar td {
+  padding: 7px;
+}
+#ui-datepicker-div .ui-datepicker-calendar .ui-datepicker-today {
+  position: relative;
+}
+#ui-datepicker-div .ui-datepicker-calendar .ui-datepicker-today:after {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  border: 1px solid;
+  border-radius: 50%;
+  top: 0;
+  left: 0;
+}
+#ui-datepicker-div .ui-datepicker-calendar .ui-state-default {
+  border: none;
+  background: transparent;
+}
+#ui-datepicker-div .ui-datepicker-calendar .ui-state-default.ui-state-active {
+  color: #61C0BF;
+}
+
+/*# sourceMappingURL=style.css.map */

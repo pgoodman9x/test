@@ -1,0 +1,684 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <title>Document</title>
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+  <meta name="format-detection" content="telephone=no">
+
+  <!--/////SNS share/////
+  <meta property="og:url" content=" ページの URL" />
+  <meta property="og:type" content=" ページの種類" />
+  <meta property="og:title" content=" ページの タイトル" />
+  <meta property="og:description" content=" ページのディスクリプション" />
+  <meta property="og:site_name" content="サイト名" />
+  <meta property="og:image" content=" サムネイル画像の URL" />
+  /////SNS share/////-->
+
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;400;700&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.1/css/swiper.css">
+  <link rel="stylesheet" href="css/reset.css" />
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  <link rel="stylesheet" 　type="text/css" href="css/style.css" />
+
+  <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
+  <script>
+   $(function () {
+      $('a[href^="#"]').click(function () {
+        var headerHight = 80;
+        var speed = 500;
+        var href = $(this).attr("href");
+        var target = $(href == "#" || href == "" ? 'html' : href);
+        var position = target.offset().top - headerHight;
+        $("html, body").animate({ scrollTop: position }, speed, "swing");
+        return false;
+      });
+    });
+
+    $(window).on('load', function () {
+        var url = $(location).attr('href');
+        if (url.indexOf("#") != -1) {
+          var anchor = url.split("#");
+          var target = $('#' + anchor[anchor.length - 1]);
+          if (target.length) {
+            var pos = Math.floor(target.offset().top) - 80;
+            $("html, body").animate({ scrollTop: pos }, 100);
+          }
+        }
+      });
+  </script>
+</head>
+<body>
+
+  <div id="fixedBox" class="cta-link">
+      <a href="#contact">無料カウンセリングを<br class="pc">予約する</a>
+  </div>
+
+<header id="top-head">
+  <div class="inner">
+    <div class="site-title">
+      <h1 class="title-name"><a href="https://cinderela-marriage.com"><img src="images/logo-02.png"></a></h1>
+    </div>
+    <div id="nav_toggle">
+      <div>
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="#dansei-data">男性会員データ</a></li>
+        <li><a href="#service">サービスについて</a></li>
+        <li><a href="#uservoice">お客さまの声</a></li>
+        <li><a href="#price">料金について</a></li>
+        <li><a href="#nagare">ご利用の流れ</a></li>
+        <li><a href="#qa">よくある質問</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+  <div id="content-wrapper">
+    <div class="content-inner">
+      <div class="hero-2col">
+        <div class="hero-image">
+          <img src="images/header-image.png" alt="">
+        </div>
+        <div class="hero-title">
+          <p>一番輝く私と</p>
+          <p>最高の相手に</p>
+          <p>出会える婚活。</p>
+        </div>
+      </div><!--hero-2col-->
+
+      <div class="top-cta">
+        <a href="#contact"><img src="images/cta-btn.png" alt=""></a>
+      </div>
+
+      <section class="jisseki">
+        <h2 class="jisseki__title">6ヶ月以内にご成婚される会員様</h2>
+        <img src="images/jisseki-02.png" alt="">
+      </section>
+
+      <section id="dansei-data" class="dansei-data">
+        <h2 class="dansei-data__title">シンデレラマリッジラボ<br class="sp">男性会員様データ</h2>
+        <p class="dansei-data__text">男性は年収700万円以上の方が75%以上で、大手・上場企業勤務のビジネスエリートの方が60%です。</p>
+        <div class="data">
+          <div class="nenshuu">
+            <img src="images/nenshuu.png" alt="">
+            <ul>
+              <li>~600万円 (10%)</li>
+              <li>600~700万円(25%)</li>
+              <li>700~800万円(20%)</li>
+              <li>800~1000万円(20%)</li>
+              <li>1000~1500万円(15%)</li>
+              <li>1500~2000万円(10%)</li>
+            </ul>
+          </div>
+          <div class="shokugyou">
+            <img src="images/shokugyou.png" alt="">
+            <ul>
+              <li>会社員(大手・上場企業)(60%)</li>
+              <li>公務員(20%)</li>
+              <li>会社員(15%)</li>
+              <li>医師・歯科医師(5%)</li>
+            </ul>
+          </div>
+          <div class="nenrei">
+            <img src="images/nenrei.png" alt="">
+            <ul>
+              <li>~25歳(10%)</li>
+              <li>26~30歳(15%)</li>
+              <li>31~35歳(20%)</li>
+              <li>36~40歳(25%)</li>
+              <li>41~45歳(20%)</li>
+              <li>46歳~(10%)</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="seikon-summary">
+        <div class="seikon-summary__title">
+          <h2><span class="pc">＼</span>みなさんシンデレラマリッジラボでご成婚されました！<span class="pc">／</span></h2>
+        </div>
+        <div class="seikon-summary__slider">
+          <div class="swiper-container slider1">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <p><span class="red">【7ヶ月でご成婚】</span>35歳 大手金融会社勤務 年収800万円  <span class="red">&hearts;</span>  32歳 事務</p>
+              </div>
+              <div class="swiper-slide">
+                <p><span class="red">【3ヶ月でご成婚】</span>42歳 大手不動産会社勤務 年収1000万円  <span class="red">&hearts;</span>  35歳 IT会社員</p>
+              </div>
+              <div class="swiper-slide">
+                <p><span class="red">【9ヶ月でご成婚】</span>39歳 大手食品メーカー会社 年収700万円  <span class="red">&hearts;</span>  34歳 看護師</p>
+              </div>
+              <div class="swiper-slide">
+                <p><span class="red">【4ヶ月でご成婚】</span>32歳 大手不動産会社 年収700万円  <span class="red">&hearts;</span>  31歳 メーカー会社員</p>
+              </div>
+              <div class="swiper-slide">
+                <p><span class="red">【7ヶ月でご成婚】</span>39歳 地方公務員 年収900万円  <span class="red">&hearts;</span>  37歳 事務</p>
+              </div>
+              <div class="swiper-slide">
+                <p><span class="red">【10ヶ月でご成婚】</span>34歳 税理士 年収800万円  <span class="red">&hearts;</span>  36歳 自営業</p>
+              </div>
+              <div class="swiper-slide">
+                <p><span class="red">【4ヶ月でご成婚】</span>36歳 医師 年収1200万円  <span class="red">&hearts;</span>  29歳 事務</p>
+              </div>
+              <div class="swiper-slide">
+                <p><span class="red">【9ヶ月でご成婚】</span>41歳 大手設計事務所勤務 年収1000万円  <span class="red">&hearts;</span>  34歳 公務員</p>
+              </div>
+              <div class="swiper-slide">
+                <p><span class="red">【6ヶ月でご成婚】</span>36歳 公務員 年収800万円  <span class="red">&hearts;</span>  31歳 事務</p>
+              </div>
+              <div class="swiper-slide">
+                <p><span class="red">【10ヶ月でご成婚】</span>38歳 大手証券会社 年収900万円  <span class="red">&hearts;</span>  38歳 会社員</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="nayami">
+        <div class="nayami-container">
+          <p>婚活が上手くいかないと不安になりますよね。</p>
+          <p>自分は割りと明るく社交的な性格なので恋愛もそれなりにしてきました。<br>
+          でも婚活がうまくいっていない。</p>
+          <p>時間だけは刻々と過ぎていく・・悩んでも答えが見つからない・・・</p>
+          <img src="images/nayami-koe.png" alt="">
+          <p class="nayami-text__bold">みんな同じ気持ちで悩んでいます。</p>
+        </div>
+      </section>
+
+      <section class="fuanyouso">
+        <h2 class="serif">ご存知ですか？<br>
+        女性の結婚相談所での平均成婚率は<br class="sp"><span class="large">なんと10%！</span></h2>
+        <img src="images/hito.png" alt="">
+        <div class="fuanyouso-inner">
+        <p>10人に1人しか成婚できないんです・・<br>
+        そう、結婚相談所に登録すれば、結婚ができるわけではありません・・・</p>
+        <p>この数字は全国の結婚相談所の平均値であり、世の中には</p>
+        <p class="attention"><span class="border-yellow">「圧倒的に成婚率が高い相談所」</span>と<span class="border-gray">「圧倒的に成婚率が低い相談所」</span>があります。</p>
+
+        <div class="tasha-tokuchou">
+          <h3>成婚率が低い相談所の特徴は</h3>
+          <div class="tasha-tokuchou__box">
+            <img src="images/tasha-tokuchou_01.png" alt="">
+            <img src="images/tasha-tokuchou_02.png" alt="">
+            <img src="images/tasha-tokuchou_03.png" alt="">
+          </div>
+        </div>
+      </section>
+
+      <section class="shouko">
+        <div class="shouko-title">
+          <h2><span class="shoko-title__small">その中でも、</span><br>
+              シンデレラマリッジラボの1年以内に成婚される会員様は</h2>
+          <div class="shouko-bg">
+            <img src="images/hito2.png" alt="">
+            <img class="bottom-unit__30" src="images/shouko-image.png" alt="">
+            <p>シンデレラマリッジラボは課題を解決しながら、<br>
+            <span class="green">女性としての自信を高め理想の結婚を叶えることをコンセプト</span>にした結婚相談所です。</p>
+            <p class="shouko-text__height">おかげさまで多くの方から「話を聞きたい！」とご連絡をいただいております！</p>
+          </div>
+        </div>
+          <div id="service" class="shouko-riyuu serif">
+            <h2>シンデレラマリッジラボの<br class="sp">成婚率が高い理由はこちら！<br>
+              <span class="title__sub-text">幸せな結婚を生み出す３つのサービスコンセプトにあります。</span>
+            </h2>
+          </div>
+      </section>
+
+      <section class="shouko-point">
+        <div class="shouko-point-inner">
+          <img src="images/shouko-3point.png" alt="">
+        </div>
+
+        <div class="concept-box__01">
+          <img class="concept-box__num" src="images/concept_01.png" alt="">
+          <div class="concept-box-2col">
+            <img src="images/concept_01_image.png" alt="">
+            <div class="concept-box__text">
+              <h3>エリートビジネスマンが集う弊社独自のネットワーク</h3>
+              <p class="bottom-unit__10">シンデレラマリッジラボは代表が早稲田大学出身。</p>
+              <p class="bottom-unit__10">中学高校も埼玉県トップクラスの進学校出身で、早慶上智・マーチ以上の
+              大学出身者が多数！ハイクラスな会員ネットワークを作り上げています。<br>
+              通常の婚活とは一線を画す上質で高品質な出会いが実現可能です。</p>
+
+              <p>そのほとんどが大手企業・東証一部上場など銀行・証券・マスコミ・総合商社
+              インフラ・大手メーカー等の有名企業に勤務するビジネスエリート層なんです。</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="concept-box__02">
+          <img class="concept-box__num" src="images/concept_02.png" alt="">
+          <div class="concept-box-2col">
+            <div class="concept-box__text">
+              <h3>プロによる女性磨きで魅力度UP！シンデレラサポート！</h3>
+              <p class="bottom-unit__10">「内面も外見も輝いている女性は幸せになる」という考えから、
+              ファッション・メイク・ウォーキング・思考・までトータルビューティアップサポー
+              トをします。</p>
+
+              <p>シンデレラマリッジラボは数々の賞を獲得し、メディアにも多く取り上げられ、講師
+              として活躍するプロのプロのビューティーコンサルタントと提携。<br>
+              これまでの結婚相談所とは一線を画したファッション・メイクセミナー講座を設け、
+              内面から外見までステップアップし、シンデレラのような出会いを演出いたします。</p>
+            </div>
+            <img src="images/concept_02_image.png" alt="">
+          </div>
+        </div>
+
+        <div class="concept-box__03">
+          <img class="concept-box__num" src="images/concept_03.png" alt="">
+          <div class="concept-box-2col">
+            <img src="images/concept_03_image.png" alt="">
+            <div class="concept-box__text">
+              <h3>「何がダメだったのかわからない」を改善！<br>
+              シンデレラPDCAレポート！</h3>
+              <p class="bottom-unit__10">シンデレラマリッジラボは多くの成婚の実績があり、婚活がうまくいかない原因と解決方法をストックしています。</p>
+
+              <p>「お見合いOK率」「仮交際進展率」などを可視化して、過去の成婚会員様の実績を
+              元にアドバイスすることで、短期間で無駄のない活動を体感いただけます。</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="uservoice" class="uservoice">
+        <div class="uservoice_title serif">
+          <h2>女性会員様の喜びのお声</h2>
+        </div>
+        <div class="uservoice-slider">
+            <div class="swiper-container slider2">
+              <!-- ラッパーの（スライドを囲む） div 要素 -->
+              <div class="swiper-wrapper">
+                <!-- それぞれのスライドの div 要素 -->
+                <div class="swiper-slide">
+                  <img src="images/uservoice.png" alt="">
+                </div>
+                <div class="swiper-slide">
+                  <img src="images/uservoice2.png" alt="">
+                </div>
+                <div class="swiper-slide">
+                  <img src="images/uservoice3.png" alt="">
+                </div>
+                <div class="swiper-slide">
+                  <img src="images/uservoice4.png" alt="">
+                </div>
+                <div class="swiper-slide">
+                  <img src="images/uservoice5.png" alt="">
+                </div>
+              </div>
+              <!-- ページネーションの div 要素 -->
+              <div class="swiper-pagination"></div>
+
+              <!-- ナビゲーションボタンの div 要素-->
+              <div class="swiper-button-prev"></div>
+              <div class="swiper-button-next"></div>
+            </div>
+
+        </div>
+      </section>
+
+      <section class="story">
+          <h2>シンデレラマリッジラボの<br class="sp">誕生ストーリー</h2>
+
+            <div class="text_wrapper">
+              <p class="text hidden">
+                シンデレラマリッジラボは私の友人(33歳)を幸せにしたいと言う思いから生まれました。<br>
+                <br>
+                彼女は、明るく男女共に分け隔てなく付き合えるような優しい女性でした。<br>
+                少々気を使いすぎる部分もありますが、仕事も遅くまで頑張っていて、後輩や上司からもすかれており、私の自慢の友人でした。<br>
+                私はそんな彼女が輝いてみえていましたし、自分にないものを持っている彼女を羨ましく思っていました。<br>
+                <br>
+                <span class="bold">でも彼女は恋愛にとても自信がありませんでした。</span><br>
+                32歳で意を決して、大手結婚相談所に入会していましたが、あまりうまくいってない様子でした。<br>
+                彼女が悩んでいたのは、カウンセラーさんがただ応援してくれるだけで、なんで自分の婚活がすすまないのかわからないと悩んでいました。<br>
+                なぜお見合いが進まないのかフィードバックがないまま、出会いだけを進められて、<br>
+                うまくいかずに自信をなくすと言う負のスパイラルに陥っておりました。<br>
+                <br>
+                <br>
+                私は彼女の悩みの相談を受けながら、彼女の悩みを書き出していました。<br>
+                <br>
+                <span class="bold">
+                  ・自分に自信がない…<br>
+                ・女性としての魅力に自信がない…<br>
+                ・男性とのコミュニケーションが苦手…<br>
+                ・恋愛経験がない（少ない）…<br>
+                ・孤独な婚活に悩みや不安ばかり…<br>
+                ・頑張りたいのにどう頑張ったら良いか分からない…<br>
+                ・今のカウンセラーさんが信頼できない…<br>
+                </span>
+                <br>
+                まずは、なぜお見合いが進まないのか、会話の内容や当日の服装など細かくヒアリングを行い、女性としての自信を持ってもらうために、知り合いのメイクのプロにお願いして、私が考える男性目線でのアドバイスを行いました。<br>
+                <br>
+                真面目な彼女は私のアドバイス通り、一生懸命に取り組んでくれました。<br>
+                私はカウンセラーさんの代わりに、彼女に素敵な旦那様と出会って欲しいと真剣に彼女の婚活サポートに取り組み始めました。<br>
+                <br>
+                「この前お見合いした男性から、仮交際の連絡がきたよ！」<br>
+                と嬉しそうに教えてくれた時は、私もとても嬉しくなりました。<br>
+                <br>
+                私と二人三脚で行なってから、彼女は仮交際に進む数も増え、ついに未来の旦那様と出会うことができました。<br>
+                <br>
+                あなたが結婚相談所の婚活で行き詰まっている状況を客観的に納得感のある説明で気づきを与える事が可能です。<br>
+                その上で、明確な改善策を提案させて頂いております。<br>
+                あなたの<span class="bold">納得のいく婚活と納得のいく結婚生活を実現するため</span>にお手伝いさせて頂きます。<br>
+                豊富な経験と実績に基づくサポートでアラサー女性の結婚相談所での婚活の不安や疑問に納得のいく回答と改善策を提供致します。
+              </p>
+              <div class="show_more">
+                +　続きを読む
+              </div>
+            </div>
+      </section>
+
+      <section id="price" class="price">
+        <div class="price-title">
+          <div class="price-title__inner serif">
+            <h2>料金プラン</h2>
+            <p>※全て税抜のお値段です。</p>
+            <img src="images/price.png" alt="">
+          </div>
+        </div>
+        <div class="table-title-wrap">
+          <p class="table-title">他社と比べてもこんなにお得！</p>
+        </div>
+        　<div class="price-tasha">
+            <table class="price-tasha__hyou">
+              <tbody>
+                <tr>
+                  <th></th>
+                  <th>入会金</th>
+                  <th>月会費</th>
+                  <th>お見合い料</th>
+                  <th>成婚料</th>
+                  <th>6ヶ月間活動費</th>
+                </tr>
+                <tr>
+                  <td class="price-tasha__hyou--main">CinderellaMarriageLab</td>
+                  <td class="price-tasha__hyou--main">20,000円</td>
+                  <td class="price-tasha__hyou--main">8,000円</td>
+                  <td class="price-tasha__hyou--main">0円</td>
+                  <td class="price-tasha__hyou--main">100,000円</td>
+                  <td class="price-tasha__hyou--main">168,000円</td>
+                </tr>
+                <tr>
+                  <td class="price-tasha__hyou--sub">楽天オーネット</td>
+                  <td class="price-tasha__hyou--sub">106,000円</td>
+                  <td class="price-tasha__hyou--sub">13,900円</td>
+                  <td class="price-tasha__hyou--sub">0円</td>
+                  <td class="price-tasha__hyou--sub">0円</td>
+                  <td class="price-tasha__hyou--sub">189,400円</td>
+                </tr>
+                <tr>
+                  <td class="price-tasha__hyou--sub">パートナー<br>エージェント</td>
+                  <td class="price-tasha__hyou--sub">125,000円</td>
+                  <td class="price-tasha__hyou--sub">17,000円</td>
+                  <td class="price-tasha__hyou--sub">0円</td>
+                  <td class="price-tasha__hyou--sub">50,000円</td>
+                  <td class="price-tasha__hyou--sub">247,000円</td>
+                </tr>
+                <tr>
+                  <td class="price-tasha__hyou--sub">ツヴァイ</td>
+                  <td class="price-tasha__hyou--sub">98,000円</td>
+                  <td class="price-tasha__hyou--sub">15,800円</td>
+                  <td class="price-tasha__hyou--sub">0円</td>
+                  <td class="price-tasha__hyou--sub">200,000円</td>
+                  <td class="price-tasha__hyou--sub">392,800円</td>
+                </tr>
+                <tr>
+                  <td class="price-tasha__hyou--sub">IBJメンバーズ</td>
+                  <td class="price-tasha__hyou--sub">165,000円</td>
+                  <td class="price-tasha__hyou--sub">15,500円</td>
+                  <td class="price-tasha__hyou--sub">0円</td>
+                  <td class="price-tasha__hyou--sub">200,000円</td>
+                  <td class="price-tasha__hyou--sub">458,000円</td>
+                </tr>
+                <tr>
+                  <td class="price-tasha__hyou--sub">サンセリテ</td>
+                  <td class="price-tasha__hyou--sub">100,000円</td>
+                  <td class="price-tasha__hyou--sub">25,000円</td>
+                  <td class="price-tasha__hyou--sub">10,000円</td>
+                  <td class="price-tasha__hyou--sub">0円</td>
+                  <td class="price-tasha__hyou--sub">350,000円</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+      </section>
+
+      <section id="nagare" class="nagare">
+        <div class="nagare-title">
+          <div class="nagare-title__inner serif">
+            <h2>シンデレラマリッジラボの活動の流れ</h2>
+            <p>確実な婚活を進めるシンデレラマリッジラボの５つの活動ステップ</p>
+          </div>
+        </div>
+        <div class="nagare-image">
+          <div class="pc">
+            <img src="images/nagare.png" alt="">
+          </div>
+          <div class="sp">
+            <img src="images/nagare-sp.png" alt="">
+          </div>
+        </div>
+      </section>
+
+      <section class="henkin">
+        <div class="pc">
+          <img src="images/henkin.png" alt="">
+        </div>
+        <div class="sp">
+          <img src="images/henkin-sp.png" alt="">
+        </div>
+      </section>
+
+      <section class="seikonritu">
+        <div class="seikonritu_title serif">
+          <h2>女性会員様の年齢別成婚率</h2>
+        </div>
+        <div class="seikonritu-image">
+          <img src="images/seikonritu_hyou.png" alt="">
+          <p>
+            国勢調査の結果を見ても、<br>
+            30～34歳女性の成婚率は42%、<br class="pc"
+            >35～39歳の女性は32%という結果です。<br>
+            <br>
+            30歳を迎えるまでに結婚する女性が多いのは事実ですが、<br class="pc"
+            >30代前半であれば精神的にも安定しており、<br class="pc"
+            >むしろ結婚しやすいと考える男性も多いです。<br>
+            <br>
+            女性の場合、<br>
+            数値で見れば30代後半になると結婚できる確率が<br class="pc"
+            >がくんと下がってしまいます。<br>
+            もちろん結婚できる人も多数いますが、<br>
+            年齢が高くなるほどに結婚するハードルが高くなることは<br class="pc"
+            >きちんと認識する必要があるでしょう。<br>
+            <br>
+            大切なのは、自身の年齢をしっかりと自覚し、<br>
+            年齢に見合った行動を行うことです。
+          </p>
+        </div>
+      </section>
+
+      <section id="qa" class="qa">
+        <div class="qa-inner serif">
+          <h2>よくあるご質問</h2>
+          <div class="cp_actab">
+            <input id="tab-1" type="checkbox" name="tabs">
+            <label for="tab-1"><span class="qa-q">Q</span>まずは話だけ聞いてみたいのですが、それでも良いでしょうか？</label>
+            <div class="cp_actab-content">
+              <p>もちろん大丈夫です。<br>
+              メールまたはお電話でお気軽にお問い合わせ下さい。<br>
+              シンデレラマリッジラボの成婚メソッドを十分に理解した上で、お客様にご入会頂いております。<br>
+              ホームページや文章だけでは伝えきれていない内容についてご説明させて頂きます。<br>
+              また、お客様の結婚観や不安に思っていらっしゃる事、ご意見、ご要望などしっかりとお伺いさせて頂きます。
+              </p>
+            </div>
+          </div>
+          <div class="cp_actab">
+            <input id="tab-2" type="checkbox" name="tabs">
+            <label for="tab-2"><span class="qa-q">Q</span>どの様な方が結婚相談所に入会されていますか？</label>
+            <div class="cp_actab-content">
+              <p>男性は 30代の方が多く登録され、高学歴で高収入層の割合が高くなっております。<br>
+                女性は20代後半から30代の方が多く登録されています。<br>
+              みなさん結婚を真剣に考えておられる誠実な方ばかりですのでご安心ください。<br>
+              「いい人なんているのですか？」と聞かれる事もございますが、昨今は、より良い相手との結婚をする為に結婚相談所に登録される素敵な方が増えております。</p>
+            </div>
+          </div>
+          <div class="cp_actab">
+            <input id="tab-3" type="checkbox" name="tabs">
+            <label for="tab-3"><span class="qa-q">Q</span>入会してどれくらいの期間で成婚できますか？</label>
+            <div class="cp_actab-content">
+              <p>弊社では1年以内の成婚を目指し、サポートを致します。中には活動して2ヶ月、3ヶ月で成婚された方もいらっしゃいます。</p>
+            </div>
+          </div>
+          <div class="cp_actab">
+            <input id="tab-4" type="checkbox" name="tabs">
+            <label for="tab-4"><span class="qa-q">Q</span>郵便物が届いたり電話がきたりしますか</label>
+            <div class="cp_actab-content">
+              <p>ご入会後、弊社からDMやその他郵送物をお送りすることはございません。<br>
+              また、お客様の同意なくお電話することもございませんので、ご安心してご活動いただけます。</p>
+            </div>
+          </div>
+          <div class="cp_actab">
+            <input id="tab-5" type="checkbox" name="tabs">
+            <label for="tab-5"><span class="qa-q">Q</span>無料カウンセリングで無理やり入会させられませんか？</label>
+            <div class="cp_actab-content">
+              <p>無理な勧誘などは一切行いません。<br>
+                紹介システムや条件、カウンセラーの質、サービス内容など十分納得した上でご検討下さい。</p>
+            </div>
+          </div>
+          <div class="cp_actab">
+            <input id="tab-6" type="checkbox" name="tabs">
+            <label for="tab-6"><span class="qa-q">Q</span>無料カウンセリグではどのようなことをするのですか？</label>
+            <div class="cp_actab-content">
+              <p>まずはご自身について現在の状況、結婚への想い、相手に対して望まれること等をお聞かせください。<br>
+              また、カウンセラーからシンデレラマリッジラボのシステムやサービスのご説明をいたします。<br>
+              ご自身で見ていただき、正しくご理解の上、ご入会の検討をいただければと思います。</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" class="contact">
+        <script src="https://sdk.form.run/js/v2/embed.js"></script>
+        <div class="formrun-embed" data-formrun-form="@motesatsu-photo-1595396800" data-formrun-redirect="true">
+          <div class="ttl">無料カウンセリングのご予約はこちらから</div>
+          <div class="container">
+            <div class="contact__wrapper">
+              <div class="contact__form">
+                <dl class="row">
+                  <dt class="head">相談方法<span class="required">※必須</span></dt>
+                  <dd>
+                    <label class="radio__field" for="method01">                    
+                      <input id="method01" type="radio" name="your-method">新宿店舗ご来店
+                      <span class="checkmark"></span>
+                    </label>
+                    <label class="radio__field" for="method02">
+                      <input id="method02" type="radio" name="your-method">オンライン婚活相談
+                      <span class="checkmark"></span>
+                    </label>
+                    <div class="error">必須項目に入力してください。</div>
+                  </dd>
+                </dl>
+
+                <dl class="row">
+                  <dt class="head">希望日時<span class="required">※必須</span></dt>
+                  <dd>
+                    <input type="text" name="your-date" id="datepicker">
+                    <p>クリックするとカレンダーと時刻が表示されます。</p>
+                  </dd>
+                </dl>
+
+
+                <dl class="row">
+                  <dt class="head">お名前<span class="required">※必須</span></dt>
+                  <dd>
+                    <input type="text" name="your-name" class="is-error">
+                    <div class="error">必須項目に入力してください。</div>
+                  </dd>
+                </dl>
+
+                <dl class="row">
+                  <dt class="head">性別<span class="required">※必須</span></dt>
+                  <dd>
+                    <label class="radio__field" for="sex01">
+                      <input id="sex01" type="radio" name="your-sex">男性
+                      <span class="checkmark"></span>
+                    </label>
+                    <label class="radio__field" for="sex02">
+                      <input id="sex02" type="radio" name="your-sex">女性
+                      <span class="checkmark"></span>
+                    </label>
+                  </dd>
+                </dl>
+
+                <dl class="row">
+                  <dt class="head">ご年齢<span class="required">※必須</span></dt>
+                  <dd>
+                    <input type="text" name="your-age">
+                  </dd>
+                </dl>
+
+               <dl class="row">
+                  <dt class="head">電話番号<span class="required">※必須</span></dt>
+                  <dd>
+                    <input type="tel" name="your-tel" placeholder="09012345678">
+                  </dd>
+                </dl>
+
+               <dl class="row">
+                  <dt class="head">メールアドレス<span class="required">※必須</span></dt>
+                  <dd>
+                    <input type="email" name="your-email" placeholder="example@mail.com">
+                  </dd>
+                </dl>
+              </div>
+              <div class="contact__btn">
+                <input type="submit" value="内容の確認をする">
+              </div>
+            </div>
+          </div>
+        </div>
+        </div>
+
+      </section>
+    </div>
+  </div>
+
+  <footer id="footer-wrapper">
+    <div class="footer-inner">
+      <div class="site-title">
+        <div class="title-name"><a href="https://cinderela-marriage.com"><img src="images/logo-02.png"></a></div>
+      </div>
+      <div class="footer-link">
+        <a href="legal.html" class="legal">特定商取引法に基づく表記</a>
+        <a href="privacy.html">プライバシーポリシー</a>
+      </div>
+      <p class="copyright">©︎ 2021 シンデレラマリッジラボ All Right Reserved.</p>
+    </div>
+  </footer>
+  <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.1/js/swiper.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <script src="https://rawgit.com/jquery/jquery-ui/master/ui/i18n/datepicker-ja.js"></script>
+  <script src="js/wrap-scroll.js"></script>
+  <script src="js/script.js"></script>
+  <script>
+  $("#datepicker").datepicker({
+    showOtherMonths: true
+  });
+</script>
+</body>
+</html>
